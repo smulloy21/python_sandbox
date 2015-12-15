@@ -3,7 +3,7 @@ from twisted.internet import reactor, protocol, endpoints
 class UpperProtocol(protocol.Protocol):
 
     def connectionMade(self):
-        self.transport.write(b'Hi! Send me text to convert to uppercase:\n\n')
+        self.transport.write(b'Hi! Send me text to convert to uppercase:\n')
         # ^ inserts the data into a queue
 
     def connectionLost(self, reason):
@@ -12,6 +12,7 @@ class UpperProtocol(protocol.Protocol):
     def dataReceived(self, data):
         self.transport.write(data.upper())
         self.transport.loseConnection()
+        # ^ comment out to keep connection running
 
 factory = protocol.ServerFactory()
 factory.protocol = UpperProtocol
