@@ -34,3 +34,21 @@ reactor.run()
 # [....]
 # [Connection closed by foreign host.]
 # $
+
+
+# time diff of threaded vs synch:
+# (running multiclient, sending games.com and nytimes urls)
+# fetching http://www.games.com/
+# fetched http://www.games.com/
+# took 1.2363109588623047
+# fetching http://www.nytimes.com/
+# fetched http://www.nytimes.com/
+# took 0.14466404914855957
+#
+# (running threadedclient, sending games.com and nytimes urls)
+# fetching http://www.games.com/
+# fetched http://www.games.com/
+# took 1.7874999046325684
+# fetching http://www.nytimes.com/
+# fetched http://www.nytimes.com/
+# took 0.14489388465881348
