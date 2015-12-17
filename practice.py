@@ -14,7 +14,7 @@ class UpperProtocol(protocol.Protocol):
 
     def dataReceived(self, data):
         self.transport.write(data.upper())
-        # self.transport.loseConnection()
+        self.transport.loseConnection()
         # ^ comment out to keep connection running
 
 def getUpperFactory():
