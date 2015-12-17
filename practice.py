@@ -30,7 +30,7 @@ endpoints.serverFromString(reactor, 'tcp:8000').listen(getUpperFactory())
 reactor.run()
 
 
-# (with server running in seperate console tab)
+# (after having run 'python3 practice.py' in a separate console tab)
 # $ telnet localhost 8000
 # [Trying 127.0.0.1...]
 # [Connected to localhost.]

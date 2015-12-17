@@ -28,18 +28,22 @@ if __name__ == '__main__':
 # (while running practice.py in seperate console tab)
 # $ python3 multiclient.py 127.0.0.1:8000 some data to send
 # sending some
+# There are 1 connections.
 # Hi! Send me text to convert to uppercase:
 # SOME
 #
 # sending data
+# There are 1 connections.
 # Hi! Send me text to convert to uppercase:
 # DATA
 #
 # sending to
+# There are 1 connections.
 # Hi! Send me text to convert to uppercase:
 # TO
 #
 # sending send
+# There are 1 connections.
 # Hi! Send me text to convert to uppercase:
 # SEND
 #
